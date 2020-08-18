@@ -86,8 +86,10 @@ class App extends Component {
       <div className="App">
         <div className="row">
           <div className="col s6 offset-s3">
-            <h1> Weather</h1>
+            <h1> Weather API</h1>
+            {/*You can delete this button to make UI look better*/}
             <button onClick={this.removeModal} className="btn">Remove from DOM!</button>
+            <h3>{this.state.cityName}</h3>
             <Headers temp={this.state.temp} isRaining={this.state.isRaining} />
 
             {/*This will trigger searchCity function when user submits*/}
@@ -98,9 +100,8 @@ class App extends Component {
           </div>
         </div>
 
-
         {/*Modal Button*/}
-        <a className="waves-effect waves-light btn modal-trigger" href="#modal1">Weather Details</a>
+        <a className="waves-effect waves-light btn modal-trigger" href="#modal1">Click here for Weather Details</a>
 
         {/*Conditionally render modal based if it is true or not*/}
         {this.state.showModal ? <Modal iconUrl={iconUrl} weather={this.state.weather} cityName={this.state.cityName} low={this.state.low} high={this.state.high} />
