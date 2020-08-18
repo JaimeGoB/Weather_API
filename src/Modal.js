@@ -9,6 +9,16 @@ class Modal extends Component {
 
         }
     }
+    componentDidMount() {
+        this.timer = setInterval(() => {
+            console.log("Test")
+        }, 500)
+    }
+
+    componentWillUnmount() {
+        console.log("Component is about to be history...");
+        clearInterval(this.timer)
+    }
 
     render() {
         return (

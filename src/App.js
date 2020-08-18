@@ -16,7 +16,8 @@ class App extends Component {
       weather: "",
       icon: "",
       cityName: "",
-      isRaining: ""
+      isRaining: "",
+      showModal: true
 
     }
 
@@ -70,7 +71,12 @@ class App extends Component {
       })
     })
   }
-
+  /*Function is used to swithc Modal Button to false*/
+  removeModal = () => {
+    this.setState({
+      showModal: false
+    })
+  }
 
   render() {
     //Icon lists are in: https://openweathermap.org/weather-conditions
@@ -81,6 +87,7 @@ class App extends Component {
         <div className="row">
           <div className="col s6 offset-s3">
             <h1> Weather</h1>
+            <button onClick={this.removeModal} className="btn">Remove from DOM!</button>
             <Headers temp={this.state.temp} isRaining={this.state.isRaining} />
 
             {/*This will trigger searchCity function when user submits*/}
@@ -95,11 +102,13 @@ class App extends Component {
         {/*Modal Button*/}
         <a className="waves-effect waves-light btn modal-trigger" href="#modal1">Weather Details</a>
 
-        <Modal iconUrl={iconUrl} weather={this.state.weather} cityName={this.state.cityName} low={this.state.low} high={this.state.high} />
+        {/*Conditionally render modal based if it is true or not*/}
+        {this.state.showModal ? <Modal iconUrl={iconUrl} weather={this.state.weather} cityName={this.state.cityName} low={this.state.low} high={this.state.high} />
+          : ""}
+
       </div>
     );
   }
-
 }
 
 
