@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
+import Headers from './Headers';
+import Modal from './Modal';
 
 class App extends Component {
 
@@ -79,8 +81,7 @@ class App extends Component {
         <div className="row">
           <div className="col s6 offset-s3">
             <h1> Weather</h1>
-            <h1> {this.state.isRaining}</h1>
-
+            <Headers temp={this.state.temp} isRaining={this.state.isRaining} />
 
             {/*This will trigger searchCity function when user submits*/}
             <form onSubmit={this.searchCity}>
@@ -94,21 +95,7 @@ class App extends Component {
         {/*Modal Button*/}
         <a className="waves-effect waves-light btn modal-trigger" href="#modal1">Weather Details</a>
 
-        {/*Modal Button*/}
-        <div id="modal1" className="modal">
-          <div className="modal-content">
-            <h4>{this.state.cityName}</h4>
-            <p> Temp: {this.state.temp}</p>
-            <p> High: {this.state.high} - Low: {this.state.low}</p>
-            <p> {this.state.weather} <img src={iconUrl} /> </p>
-          </div>
-          <div className="modal-footer">
-            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Agree</a>
-          </div>
-        </div>
-        {/*Modal Button*/}
-
-
+        <Modal iconUrl={iconUrl} weather={this.state.weather} cityName={this.state.cityName} low={this.state.low} high={this.state.high} />
       </div>
     );
   }
