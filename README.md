@@ -1,9 +1,12 @@
-#Weather API UI using React and OpenWeather 
+# Weather API UI using React and OpenWeather 
 
 This project will let the user enter a city name. It will automically provide the temperature and display it.
 If the user would like to see further weather details, they may do so by clicking the button.
 Clicking the button will provided more information about current weather and a icon provided by:
 https://openweathermap.org/api
+
+
+
 
 
 <p float="left">
