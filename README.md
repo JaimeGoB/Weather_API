@@ -7,10 +7,10 @@ https://openweathermap.org/api
 
 
 <p float="left">
-  <img src="https://github.com/JaimeGoB/Weather_API/blob/master/status/demo/Dallas.png" width="400" height="400" />
-  <img src="https://github.com/JaimeGoB/Weather_API/blob/master/status/demo/London1.png" width="400" height="400" />
-  <img src="https://github.com/JaimeGoB/Weather_API/blob/master/status/demo/London2.png" width="400" height="400" />
-  <img src="https://github.com/JaimeGoB/Weather_API/blob/master/status/demo/Madrid.png" width="400" height="400" />
-  <img src="https://github.com/JaimeGoB/Weather_API/blob/master/status/demo/SanDiego.png" width="400" height="400" />
+  <img src="https://github.com/JaimeGoB/Weather_API/blob/master/status/demo/Dallas.png" width="500" height="500" />
+  <img src="https://github.com/JaimeGoB/Weather_API/blob/master/status/demo/London1.png" width="500" height="500" />
+  <img src="https://github.com/JaimeGoB/Weather_API/blob/master/status/demo/London2.png" width="500" height="500" />
+  <img src="https://github.com/JaimeGoB/Weather_API/blob/master/status/demo/Madrid.png" width="500" height="500" />
+  <img src="https://github.com/JaimeGoB/Weather_API/blob/master/status/demo/SanDiego.png" width="500" height="500" />
 
 </p>
